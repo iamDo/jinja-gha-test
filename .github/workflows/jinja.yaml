@@ -18,5 +18,6 @@ jobs:
           data_format: yaml
           variables: |
               not_in_datafile='not in datafile'
+              dot.not='dot not'
       - name: Show Result
         run: cat example.env

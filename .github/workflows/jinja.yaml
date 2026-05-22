@@ -1,0 +1,20 @@
+name: Jinja
+
+on:
+  push:
+
+jobs:
+  run-jinja:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Run Jinja
+        uses: cuchi/jinja2-action@v1.3.0
+        with:
+          template: template.j2
+          output_file: example.env
+          data_file: template.data.yaml
+          data_format: yaml
+      - name: Show Result
+        run: cat example.env

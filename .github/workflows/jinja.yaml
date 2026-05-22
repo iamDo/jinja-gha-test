@@ -16,5 +16,7 @@ jobs:
           output_file: example.env
           data_file: template.data.yaml
           data_format: yaml
+          variables: |
+              not_in_datafile='not in datafile'
       - name: Show Result
         run: cat example.env
